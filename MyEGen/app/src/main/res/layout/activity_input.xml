@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputActivity">
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/text1"
+        android:text="이름"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/namevalue"
+        style="@style/text2"
+        android:layout_marginEnd="30dp"
+        android:hint="홍길동"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/birth"
+        style="@style/text1"
+        android:text="생년월일"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/birthvalue"
+        style="@style/text2"
+        android:layout_marginEnd="30dp"
+        android:hint="1990-01-01"
+        app:layout_constraintBaseline_toBaselineOf="@id/birth"
+        app:layout_constraintEnd_toEndOf="@id/namevalue"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <ImageView
+        android:id="@+id/birthCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_calendar_24"
+        app:layout_constraintBottom_toBottomOf="@id/birthvalue"
+        app:layout_constraintEnd_toEndOf="@id/namevalue"
+        app:layout_constraintTop_toTopOf="@id/birthvalue" />
+
+    <TextView
+        android:id="@+id/bldtype"
+        style="@style/text1"
+        android:text="혈액형"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birth" />
+
+    <RadioGroup
+        android:id="@+id/bldgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/bldtype"
+        app:layout_constraintEnd_toStartOf="@id/bldspn"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/bldtype">
+
+        <RadioButton
+            android:id="@+id/bldPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/radiobtncustom"
+            android:button="@null"
+            android:fontFamily="@font/sbugrom"
+            android:gravity="center"
+            android:text="Rh+"
+            android:checked="true"
+            android:textColor="@drawable/radiotextcustom" />
+
+        <RadioButton
+            android:id="@+id/bldMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="-2dp"
+            android:background="@drawable/radiobtncustom"
+            android:button="@null"
+            android:fontFamily="@font/sbugrom"
+            android:gravity="center"
+            android:text="Rh-"
+            android:textColor="@drawable/radiotextcustom" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/bldspn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/sbugrom"
+        app:layout_constraintBottom_toBottomOf="@id/bldtype"
+        app:layout_constraintEnd_toEndOf="@id/namevalue"
+        app:layout_constraintStart_toEndOf="@id/bldgroup"
+        app:layout_constraintTop_toTopOf="@id/bldtype"
+        android:contentDescription="혈액형스피너"
+        />
+    <TextView
+        android:id="@+id/tel"
+        style="@style/text1"
+        android:text="비상 연락처"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bldtype" />
+
+    <EditText
+        android:id="@+id/telvalue"
+        style="@style/text2"
+        android:hint="010-1234-5678"
+        android:maxLength="13"
+        android:inputType="phone"
+        app:layout_constraintBaseline_toBaselineOf="@id/tel"
+        app:layout_constraintEnd_toEndOf="@id/namevalue"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/notice"
+        style="@style/text1"
+        android:text="주의사항"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tel" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sbugrom"
+        android:gravity="end|center_vertical"
+        android:text="주의사항보기"
+        android:textColor="#993800"
+        app:layout_constraintBottom_toBottomOf="@id/notice"
+        app:layout_constraintEnd_toEndOf="@id/namevalue"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/notice" />
+
+    <EditText
+        android:id="@+id/noticevalue"
+        style="@style/text2"
+        android:layout_margin="0dp"
+        android:hint="주의사항"
+        app:layout_constraintEnd_toEndOf="@id/namevalue"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/checkbox" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/savebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        android:contentDescription="버튼"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_save_as_24" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/birthlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="birthCal,birthvalue"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

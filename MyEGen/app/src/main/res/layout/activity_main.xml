@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/text1"
+        android:text="이름"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameval"
+        style="@style/text2"
+        android:layout_marginEnd="30dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="홍길동"
+        app:layout_constraintBaseline_toBaselineOf="@id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/birth"
+        style="@style/text1"
+        android:text="생년월일"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/birthval"
+        style="@style/text2"
+        android:text="1990-01-01"
+        app:layout_constraintBaseline_toBaselineOf="@id/birth"
+        app:layout_constraintEnd_toEndOf="@id/nameval"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/bldtype"
+        style="@style/text1"
+        android:text="혈액형"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birth" />
+
+    <TextView
+        android:id="@+id/bldtypeval"
+        style="@style/text2"
+        android:text="A"
+        app:layout_constraintBaseline_toBaselineOf="@id/bldtype"
+        app:layout_constraintEnd_toEndOf="@id/nameval"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tel"
+        style="@style/text1"
+        android:text="비상 연락처"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bldtype" />
+
+    <ImageView
+        android:id="@+id/call"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_baseline_phone_24"
+        app:layout_constraintBottom_toBottomOf="@id/tel"
+        app:layout_constraintEnd_toStartOf="@id/telval"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/tel" />
+
+    <TextView
+        android:id="@+id/telval"
+        style="@style/text2"
+        android:text="010-1234-5678"
+        app:layout_constraintBaseline_toBaselineOf="@id/tel"
+        app:layout_constraintEnd_toEndOf="@id/nameval"
+        app:layout_constraintStart_toEndOf="@+id/call" />
+
+    <TextView
+        android:id="@+id/notice"
+        style="@style/text1"
+        android:text="주의사항"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tel" />
+
+    <TextView
+        android:id="@+id/noticeval"
+        style="@style/text2"
+        android:text="주의사항"
+        app:layout_constraintBaseline_toBaselineOf="@id/notice"
+        app:layout_constraintEnd_toEndOf="@id/nameval"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/goinputbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        android:contentDescription="버튼"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dltbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        android:contentDescription="버튼"
+        app:layout_constraintBottom_toTopOf="@id/goinputbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/tellayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="call,telval"
+        tools:ignore="MissingConstraints"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
