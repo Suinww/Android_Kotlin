@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="inputUnit">
+        <item>mm</item>
+        <item>cm</item>
+        <item>m</item>
+        <item>in</item>
+        <item>ft</item>
+        <item>yd</item>
+        <item>mile</item>
+        <item>자</item>
+        <item>간</item>
+        <item>정</item>
+        <item>리</item>
+    </string-array>
+    <string-array name="outputUnit">
+        <item>mm</item>
+        <item>cm</item>
+        <item>m</item>
+        <item>in</item>
+        <item>ft</item>
+        <item>yd</item>
+        <item>mile</item>
+        <item>자</item>
+        <item>간</item>
+        <item>정</item>
+        <item>리</item>
+</string-array>
+
+</resources>
