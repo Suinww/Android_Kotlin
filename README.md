@@ -15,7 +15,7 @@
 ![MyEGen_2](https://github.com/Suinww/Android_Kotlin/assets/101302756/e0198c0f-25ea-41f3-9c9a-1183c254bfbb)
 
 - 응급의료정보(수정중)
-  - UI : ConstraintLayout, GuideLine, Style, RadioButton, CheckBox, Spinner, DatePicker
+  - UI : ConstraintLayout, GuideLine, Style, Layer, RadioButton, CheckBox, Spinner, DatePicker
   - Android : viewBinding, intent(화면전환, 전화앱 실행), Toast, 
 
 ## NewCal
@@ -29,9 +29,14 @@
 
 
 ## Stopwatch
-카운트다운, 랩기능이 있는 스톱워치
+
+- 스톱워치
+  -  UI : ConstraintLayout, ProgressBar, floatingactionButton, ScrollView, Group
+  - Android : viewBinding, setOnClickListener, Thread, timer, runOnUiThread, post, AlertDialog, ToneGenerator
 
 ## UnitTransducer
-단위변환기(길이)
+![Unittransducer](https://github.com/Suinww/Android_Kotlin/assets/101302756/75ceaf48-9598-4441-88b8-39c8d98f124b)
 
-mm,cm,m,inch,feet,yard,mile 을 서로 변환
+- 길이단위변환기
+  - UI : ConstraintLayout, LinearLayout, Spinner
+  - Android : viewBinding, list, addTextChangedListener, ActivityLifecycle 
