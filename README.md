@@ -2,7 +2,7 @@
 
 ## CountApp
 
-<img src="![CountApp](https://github.com/Suinww/Android_Kotlin/assets/101302756/27723fdc-65d2-4b3a-b200-86b1e7ad8c2f)">
+<img src="https://github.com/Suinww/Android_Kotlin/assets/101302756/27723fdc-65d2-4b3a-b200-86b1e7ad8c2f">
 
 - 계수기
   - UI : LinearLayout
