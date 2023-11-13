@@ -42,3 +42,11 @@
 - 길이단위변환기
   - UI : ConstraintLayout, LinearLayout, Spinner
   - Android : viewBinding, list, addTextChangedListener, ActivityLifecycle 
+
+## VocabularyList
+![VocabularyList](https://github.com/Suinww/Android_Kotlin/assets/101302756/51fb890c-ba58-480e-90bf-3767d7d02cfa)
+
+- 단어장
+  - UI : ConstraintLayout - Barrier, RecyclerView, RecyclerViewAdapter, TextinputLayout, TextInputEditText, ChipGroup, Chip
+  - Kotlin : Data Class
+  - Android : Room, registerForActivityResult, Parcelize
