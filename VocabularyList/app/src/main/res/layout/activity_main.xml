@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/vocaTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="단어입니다"
+        android:textColor="#f58f00"
+        android:fontFamily="@font/gmarketsansbold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/meanTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="뜻입니다"
+        android:textColor="#f58f00"
+        android:fontFamily="@font/gmarketsansmedium"
+        app:layout_constraintEnd_toEndOf="@id/vocaTextView"
+        app:layout_constraintStart_toStartOf="@id/vocaTextView"
+        app:layout_constraintTop_toBottomOf="@id/vocaTextView" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="#c0c0c0"
+        app:layout_constraintTop_toBottomOf="@id/meanTextView" />
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@id/btnEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@id/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@id/btnDelete" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="btnDelete,btnEdit" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wordRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnGotoAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:backgroundTint="#f58f00"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@null"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>
